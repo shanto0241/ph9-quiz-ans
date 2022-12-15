@@ -1,9 +1,16 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
+import QuizCard from "./QuizCard";
 
 const Quizes = () => {
+  const quizeLoader = useLoaderData();
+  const quizes = quizeLoader.data;
+  console.log(quizes);
   return (
-    <div>
-      <h5>quizes are good</h5>
+    <div className="grid gap-4 grid-cols-4 p-4 m-10">
+      {quizes.map((quizcard) => {
+        return <QuizCard key={quizcard.id} quizcard={quizcard}></QuizCard>;
+      })}
     </div>
   );
 };
