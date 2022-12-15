@@ -1,29 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
       <div className="navbar bg-gray-900">
         <div className="flex-1">
-          <Link className="btn btn-ghost normal-case text-xl text-white">
+          <NavLink className="btn btn-ghost normal-case text-xl text-white">
             TENET.que
-          </Link>
+          </NavLink>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/quizes">Quizes</Link>
+              <NavLink to="/quizes">Quizes</NavLink>
             </li>
 
             <li>
-              <Link to="/chart">Insights</Link>
+              <NavLink to="/chart">Insights</NavLink>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
           </ul>
         </div>
